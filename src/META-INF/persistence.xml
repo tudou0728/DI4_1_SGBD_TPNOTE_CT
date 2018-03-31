@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence http://java.sun.com/xml/ns/persistence/persistence_2_0.xsd" version="2.0" xmlns="http://java.sun.com/xml/ns/persistence">
+	<persistence-unit	name="test"	transaction-type="RESOURCE_LOCAL"> 
+		<class>com.test.jpa.Video</class>
+		<class>com.test.jpa.Format</class>
+		<class>com.test.jpa.Player</class>
+		<class>com.test.jpa.CodecType</class>
+		<class>com.test.jpa.Codec</class>	
+		<class>com.test.jpa.Entreprise</class>
+		<class>com.test.jpa.PlayerCodec</class>
+		<class>com.test.jpa.PlayerFormat</class>					
+			<properties>
+			<!-- pilote -->
+				<property	name="javax.persistence.jdbc.driver" value="com.mysql.jdbc.Driver"/>
+				<property	name="javax.persistence.jdbc.url" value="jdbc:mysql://127.0.0.1/sgbdtpnote?createDatabaseIfNotExist=true&amp;"/>
+				<property	name="javax.persistence.jdbc.user" value="root"/>
+				<property	name="javax.persistence.jdbc.password" value=""/> 
+				<property 	name="hibernate.connection.pool_size" value="10"/>
+				<property 	name="hibernate.dialect" value="org.hibernate.dialect.MySQL5Dialect"/> 
+				<property 	name="hibernate.show_sql" value="false"/>
+				<property 	name="hibernate.temp.use_jdbc_metadata_defaults" value="true"/>
+				<property 	name="hibernate.hbm2ddl.auto" value="update"/>
+			</properties>
+		</persistence-unit>
+</persistence>
